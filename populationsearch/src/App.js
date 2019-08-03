@@ -1,6 +1,9 @@
 import React from "react";
 import Select from "react-select";
 import PostData from "../src/dataService.json";
+import City from "../src/city.json";
+import "./App.css";
+import Tables from "./Tables";
 
 class App extends React.Component {
   render() {
@@ -8,10 +11,20 @@ class App extends React.Component {
     return (
       <div>
         <Select options={PostData} />
-        <Select options={PostData} />
-        {PostData.map((postDetail, index) => {
-          return <h1 key={index}>{postDetail.name}</h1>;
-        })}
+        <Select options={City} />
+        <div>
+          {/* <div class="left">
+            {PostData.map((postDetail, index) => {
+              return <h1 key={index}>{postDetail.value}</h1>;
+            })}
+          </div>
+          <div class="right">
+            {City.map((city, index) => {
+              return <h1 key={index}>{city.value}</h1>;
+            })}
+          </div> */}
+          <Tables />
+        </div>
       </div>
     );
   }
