@@ -10,7 +10,8 @@
     "react-multilevel-select": "^1.0.3",
     "react-numeric-input": "^2.2.3",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "typescript": "^3.5.3"
   },
   "off-babel": {
     "plugins": [

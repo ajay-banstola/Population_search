@@ -4,7 +4,7 @@ import Header from "../parts/Header";
 import Formfield from "../parts/Formfield";
 import Test from "./Test";
 import "./FormInput.css";
-import MyTable from "../parts/MyTable";
+import MyTable from "../parts/MyTable.tsx";
 // import NavbarnotLoggedin from "../parts/NavbarnotLoggedin";
 
 class FormInput extends Component {
@@ -27,7 +27,18 @@ class FormInput extends Component {
         {renderwala}
         <Test />
         {/* <Formfield /> */}
-        <MyTable />
+        <MyTable
+          rows={[
+            {
+              id: 23,
+              Country: "Nepal",
+              City: "Kathmandu",
+              Age: "Young",
+              Male_Population: 322323,
+              Female_Population: 232321
+            }
+          ]}
+        />
       </div>
     );
   }
