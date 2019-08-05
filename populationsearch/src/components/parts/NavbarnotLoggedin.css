@@ -1,0 +1,22 @@
+*,
+html,
+body {
+  padding: 5px;
+  margin: 5px;
+}
+ul {
+  list-style: none;
+  border: solid;
+}
+
+ul li {
+  display: inline-block;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul li a {
+  padding-right: 20px;
+}

@@ -1,14 +1,21 @@
 {
-  "name": "populationsearch",
+  "name": "ajay",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.0",
+    "material-ui": "^0.20.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "react-select": "^3.0.4",
-    "react-table": "^6.10.0"
+    "react-multilevel-select": "^1.0.3",
+    "react-numeric-input": "^2.2.3",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1"
+  },
+  "off-babel": {
+    "plugins": [
+      "@babel/plugin-proposal-export-default-from"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.5.2"
   }
 }
