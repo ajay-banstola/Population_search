@@ -9,7 +9,18 @@ import MyTable from "../parts/MyTable.tsx";
 
 class FormInput extends Component {
   state = {
-    isAuthenticate: false
+    isAuthenticate: false,
+    // rows: [
+    //   {
+    id: "45",
+    Country: "Nepal",
+    City: "Kathmandu",
+    Age: "Young",
+    Male_Population: 32434234,
+    Female_Population: 23323,
+    rows: []
+    //   }
+    // ]
   };
 
   render() {
@@ -21,24 +32,33 @@ class FormInput extends Component {
     // } else {
     //   renderwala = <NavbarnotLoggedin props={this.state.isAuthenticate} />;
     // }
+    // const rows = [
+    //   {
+    //     id: "45",
+    //     Country: "Nepal",
+    //     City: "Kathmandu",
+    //     Age: "Young",
+    //     Male_Population: 32434234,
+    //     Female_Population: 23323
+    //   }
+    // ];
     return (
       <div className="Content">
         <Header />
         {renderwala}
-        <Test />
+        <Test rows={this.state.rows} />
+        {/* onSubmit={data => {
+            setRows(currentRows => [
+              ...currentRows,
+              {
+                id: 4,
+                ...data
+              }
+            ]);
+          }}  */}
         {/* <Formfield /> */}
-        <MyTable
-          rows={[
-            {
-              id: 23,
-              Country: "Nepal",
-              City: "Kathmandu",
-              Age: "Young",
-              Male_Population: 322323,
-              Female_Population: 232321
-            }
-          ]}
-        />
+        {/* {console.log(this.state.rows)} */}
+        <MyTable rows={this.state.rows} />
       </div>
     );
   }

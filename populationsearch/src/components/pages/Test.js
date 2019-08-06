@@ -22,9 +22,19 @@ class Test2 extends Component {
     selectedCountry: "Nepal"
   };
   handleChange = e => {
-    console.log(this.state);
     this.setState({ selectedCountry: e.target.value });
-    console.log(this.state);
+  };
+  handleSubmit = event => {
+    event.preventDefault();
+    const rows = [...this.props.rows];
+
+    rows.push({
+      Country: rows.Country,
+      City: rows.City,
+      Age: rows.City,
+      Male_Population: rows.Male_Population,
+      Female_Population: rows.Female_Population
+    });
   };
 
   render() {
@@ -34,7 +44,7 @@ class Test2 extends Component {
 
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h3>Country name</h3>
           <select
             value={this.state.selectedCountry}
