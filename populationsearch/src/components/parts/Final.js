@@ -1,5 +1,5 @@
 import React from "react";
-
+import Mytable from "./MyTable";
 class Final extends React.Component {
   state = {
     countries: [
@@ -159,7 +159,6 @@ class Final extends React.Component {
       });
     });
 
-    console.log(sum);
     // console.log(this.state.countries[0].cities[0].gender[0].agechild);
     let country = this.state.countries.filter(country => {
       return country.name === this.state.selectedcountry;
@@ -182,7 +181,7 @@ class Final extends React.Component {
 
     return (
       <div>
-        countries
+        COUNTRIES
         <select
           value={this.state.selectedcountry}
           onChange={e => {
@@ -193,7 +192,7 @@ class Final extends React.Component {
             return <option key={i}>{country.name}</option>;
           })}
         </select>
-        cities
+        CITIES
         <select
           value={this.state.selectedCity}
           onChange={this.handleChange2.bind(this)}
@@ -203,7 +202,7 @@ class Final extends React.Component {
             return <option key={i}>{sal.name}</option>;
           })}
         </select>
-        gender
+        GENDER
         <select
           value={this.state.selectedgender}
           onChange={this.handleChange3.bind(this)}
@@ -229,17 +228,19 @@ class Final extends React.Component {
             </tr>
           </tbody>
         </table>
+        {console.log(sum)}
         {/* {console.log(country)}
         {console.log(city)} */}
         {/* {console.log(value)} */}
-        {value[0].agechild}
+        {/* {value[0].agechild}
         <br />
         {value[0].ageold}
         <br />
         {value[0].ageyoung}
         <br />
         {sum[1][0][0]}
-        <br />
+        <br /> */}
+        {/* <Mytable datavalue={sum} datacountry={country} /> */}
         {/* {
           (country.map = (co, i) => {
             return co[i].city[i].gender[i].agechild;

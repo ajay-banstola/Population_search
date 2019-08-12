@@ -4,7 +4,7 @@ import Header from "../parts/Header";
 import Formfield from "../parts/Formfield";
 import Test from "./Test";
 import "./FormInput.css";
-import MyTable from "../parts/MyTable.tsx";
+
 import Final from "../parts/Final";
 // import NavbarnotLoggedin from "../parts/NavbarnotLoggedin";
 
@@ -60,7 +60,7 @@ class FormInput extends Component {
           }}  */}
         {/* <Formfield /> */}
         {/* {console.log(this.state.rows)} */}
-        <MyTable rows={this.state.rows} />
+        {/* <MyTable rows={this.state.rows} /> */}
       </div>
     );
   }
