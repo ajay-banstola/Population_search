@@ -29,12 +29,14 @@ class Test2 extends Component {
     const rows = [...this.props.rows];
 
     rows.push({
-      Country: rows.Country,
+      Country: this.props.Country,
       City: rows.City,
       Age: rows.City,
       Male_Population: rows.Male_Population,
       Female_Population: rows.Female_Population
     });
+    this.setState({ rows: rows });
+    console.log(rows);
   };
 
   render() {

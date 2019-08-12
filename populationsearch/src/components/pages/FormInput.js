@@ -5,6 +5,7 @@ import Formfield from "../parts/Formfield";
 import Test from "./Test";
 import "./FormInput.css";
 import MyTable from "../parts/MyTable.tsx";
+import Final from "../parts/Final";
 // import NavbarnotLoggedin from "../parts/NavbarnotLoggedin";
 
 class FormInput extends Component {
@@ -46,7 +47,8 @@ class FormInput extends Component {
       <div className="Content">
         <Header />
         {renderwala}
-        <Test rows={this.state.rows} />
+        <Final />
+        {/* <Test rows={this.state.rows} /> */}
         {/* onSubmit={data => {
             setRows(currentRows => [
               ...currentRows,
