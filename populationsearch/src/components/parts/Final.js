@@ -4,10 +4,10 @@ class Final extends React.Component {
   state = {
     countries: [
       {
-        name: "country1",
+        name: "Nepal",
         cities: [
           {
-            name: "city1-1",
+            name: "Kathmandu",
             gender: [
               {
                 name: "male",
@@ -24,7 +24,7 @@ class Final extends React.Component {
             ]
           },
           {
-            name: "city1-2",
+            name: "Pokhara",
             gender: [
               {
                 name: "male",
@@ -34,19 +34,19 @@ class Final extends React.Component {
               },
               {
                 name: "female",
-                ageold: 123444,
-                ageyoung: 23221232,
+                ageold: 122444,
+                ageyoung: 23321232,
                 agechild: 7811788
               }
             ]
           },
           {
-            name: "city1-3",
+            name: "Chitwan",
             gender: [
               {
                 name: "male",
-                ageold: 123334,
-                ageyoung: 2443232,
+                ageold: 122334,
+                ageyoung: 2434232,
                 agechild: 7833788
               },
               {
@@ -60,27 +60,27 @@ class Final extends React.Component {
         ]
       },
       {
-        name: "country2",
+        name: "India",
         cities: [
           {
-            name: "city2-1",
+            name: "Mumbai",
             gender: [
               {
                 name: "male",
-                ageold: 10,
-                ageyoung: 20,
-                agechild: 5
+                ageold: 102222,
+                ageyoung: 201111,
+                agechild: 5232323
               },
               {
                 name: "female",
-                ageold: 40,
-                ageyoung: 20,
-                agechild: 10
+                ageold: 4023232,
+                ageyoung: 202323,
+                agechild: 1012323
               }
             ]
           },
           {
-            name: "city2-2",
+            name: "Kolkata",
             gender: [
               {
                 name: "male",
@@ -97,27 +97,27 @@ class Final extends React.Component {
             ]
           },
           {
-            name: "city3-3",
+            name: "Chennai",
             gender: [
               {
                 name: "male",
-                ageold: 1234,
-                ageyoung: 23232,
-                agechild: 78788
+                ageold: 12323234,
+                ageyoung: 21223,
+                agechild: 73438788
               },
               {
                 name: "female",
-                ageold: 1234,
-                ageyoung: 23232,
-                agechild: 78788
+                ageold: 12334344,
+                ageyoung: 3232,
+                agechild: 782323788
               }
             ]
           }
         ]
       }
     ],
-    selectedcountry: "country1",
-    selectedCity: "city1-1",
+    selectedcountry: "Nepal",
+    selectedCity: "Kathmandu",
     selectedgender: "male"
   };
 
@@ -176,12 +176,12 @@ class Final extends React.Component {
         return gendername.name === this.state.selectedgender;
       });
     } else {
-      value = city[0].gender[0].ageyoung;
+      value = city[0].gender;
     }
 
     return (
       <div>
-        COUNTRIES
+        COUNTRIES:
         <select
           value={this.state.selectedcountry}
           onChange={e => {
@@ -192,7 +192,7 @@ class Final extends React.Component {
             return <option key={i}>{country.name}</option>;
           })}
         </select>
-        CITIES
+        CITIES:
         <select
           value={this.state.selectedCity}
           onChange={this.handleChange2.bind(this)}
@@ -202,7 +202,7 @@ class Final extends React.Component {
             return <option key={i}>{sal.name}</option>;
           })}
         </select>
-        GENDER
+        GENDER:
         <select
           value={this.state.selectedgender}
           onChange={this.handleChange3.bind(this)}
@@ -220,14 +220,6 @@ class Final extends React.Component {
 
           </div>
         )} */}
-        <table>
-          <tbody>
-            <tr>
-              <th>Populationtype </th>
-              <th>Number </th>
-            </tr>
-          </tbody>
-        </table>
         {console.log(sum)}
         {/* {console.log(country)}
         {console.log(city)} */}
@@ -240,7 +232,12 @@ class Final extends React.Component {
         <br />
         {sum[1][0][0]}
         <br /> */}
-        {/* <Mytable datavalue={sum} datacountry={country} /> */}
+        <Mytable
+          datavalue={sum}
+          valuechild={value[0].agechild}
+          valueold={value[0].ageold}
+          valueyoung={value[0].ageyoung}
+        />
         {/* {
           (country.map = (co, i) => {
             return co[i].city[i].gender[i].agechild;

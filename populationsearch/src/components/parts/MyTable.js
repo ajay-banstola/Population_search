@@ -18,7 +18,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SimpleTable({ datavalue, datacountry }) {
+export default function SimpleTable({
+  datavalue,
+  valueold,
+  valueyoung,
+  valuechild
+}) {
   const classes = useStyles();
 
   return (
@@ -27,18 +32,24 @@ export default function SimpleTable({ datavalue, datacountry }) {
         <TableHead>
           <TableRow>
             <TableCell>Population Type</TableCell>
-            <TableCell align="right">Number</TableCell>
+            <TableCell>Number</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell component="th" scope="row" />
-            <TableCell align="right">Male</TableCell>
-            <TableCell align="right">{datavalue[0][0][0]}</TableCell>
-            <TableCell align="right" />
-            <TableCell align="right" />
+            <TableCell>Old</TableCell>
+            <TableCell>{valueold}</TableCell>
           </TableRow>
-          ))}
+          <TableRow>
+            <TableCell>Young</TableCell>
+            <TableCell>{valueyoung}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Child</TableCell>
+            <TableCell>{valuechild}</TableCell>
+
+            {/* {datavalue[0][0][0]} */}
+          </TableRow>
         </TableBody>
       </Table>
     </Paper>
