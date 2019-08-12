@@ -84,9 +84,9 @@ class Final extends React.Component {
             gender: [
               {
                 name: "male",
-                ageold: 1234,
-                ageyoung: 23232,
-                agechild: 78788
+                ageold: 1232324,
+                ageyoung: 223233232,
+                agechild: 78733388
               },
               {
                 name: "female",
@@ -150,6 +150,7 @@ class Final extends React.Component {
     //     });
     //   });
     // });
+
     var sum = this.state.countries.map((countr, i) => {
       return countr.cities.map((sumwala, j) => {
         return sumwala.gender.map((genderwala, k) => {
@@ -158,6 +159,9 @@ class Final extends React.Component {
         });
       });
     });
+
+    var Nepalsum = sum[0][0][0] + sum[0][0][1] + sum[0][1][0] + sum[0][1][1];
+    var Indiasum = sum[1][0][0] + sum[1][0][1] + sum[1][1][0];
 
     // console.log(this.state.countries[0].cities[0].gender[0].agechild);
     let country = this.state.countries.filter(country => {
@@ -238,6 +242,9 @@ class Final extends React.Component {
           valueold={value[0].ageold}
           valueyoung={value[0].ageyoung}
         />
+        Total Nepal population: {Nepalsum}
+        <br />
+        Total India population: {Indiasum}
         {/* {
           (country.map = (co, i) => {
             return co[i].city[i].gender[i].agechild;
